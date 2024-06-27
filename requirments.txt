@@ -1,0 +1,35 @@
+# Django: the web framework
+Django>=4.0,<5.0
+
+# psycopg2: PostgreSQL database adapter for Python
+psycopg2-binary>=2.9,<3.0
+
+# Django REST framework: toolkit for building Web APIs
+djangorestframework>=3.13,<4.0
+
+# gunicorn: WSGI HTTP Server for UNIX
+gunicorn>=20.0,<21.0
+
+# python-dotenv: for environment variable management
+python-dotenv>=0.19,<1.0
+
+# Whitenoise: for serving static files
+whitenoise>=5.3,<6.0
+
+# django-cors-headers: for handling Cross-Origin Resource Sharing (CORS)
+django-cors-headers>=3.10,<4.0
+
+# django-environ: for managing environment variables (alternative to python-dotenv)
+django-environ>=0.9,<1.0
+
+# Django Security Packages
+django-secure>=1.0,<2.0
+django-axes>=5.0,<6.0  # for brute force attack prevention
+
+# Django Debug Toolbar: for debugging
+django-debug-toolbar>=3.2,<4.0
+
+# Celery: for asynchronous task queue
+celery>=5.2,<6.0
+django-celery-beat>=2.2,<3.0
+
