@@ -31,6 +31,7 @@ class  Book(models.Model):
         return self.title
 
 class Conributor(models.Model):
+    
     first_name=models.CharField\
     (max_length=50,verbose_name='Conributor first name')
     last_name=models.CharField\
@@ -58,6 +59,10 @@ class BookConributor(models.Model):
         (verbose_name="role of contributor for this book",\
         choices=ConributionRole.choices,max_length=20
         )
+    
+    def __str__(self) :
+        return self.contributor.first_name
+    
 
 class Review(models.Model):
     content=models.CharField(max_length=254,help_text='The Review Text')
@@ -76,7 +81,8 @@ class Review(models.Model):
     book=models.ForeignKey(Book,on_delete=models.CASCADE,\
                            help_text="The book thst this review for")                                    
     
-
+    def __str__(self) :
+        return  f'review for {self.book} by {self.creator} '
         
 
 
